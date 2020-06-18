@@ -188,6 +188,14 @@ Implementing JWT Auth
 ```
 composer require tymon/jwt-auth (after install update composer.json to latest version and compose update)
 
+in config/app.php
+
+ 'providers' => [
+     ...
+    Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+ ]
+
+
 php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
 
 php artisan jwt:secret
