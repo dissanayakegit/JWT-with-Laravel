@@ -145,11 +145,10 @@ php artisan ui vue --auth
 php artisan ui react --auth
 
 
-npm install vue bootstrap - vue bootstrap
-
-if errors occurred in npm run watch
-run/ or run only
+npm install vue bootstrap-vue bootstrap
 npm install --save bootstrap-vue
+
+*any of above will install boostrap-vue
 
 in app.js paste below
 
