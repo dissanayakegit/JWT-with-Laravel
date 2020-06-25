@@ -1,3 +1,4 @@
+project setup
 
 ```
 composer create-project laravel/laravel <project name> {--prefer-dist: optional} {“5.8.*”version}
@@ -181,8 +182,6 @@ Route::get('/customer', 'CustomerController@index'); <use ur controller and api 
 regiter interface and repository on appServiceProvider.php
 ```
 
-***Madusanka***
-
 Implementing JWT Auth
 
 ```
@@ -319,3 +318,15 @@ class AuthController extends Controller
     }
 }
 ```
+
+to catch the errors from frontend add below in the /app/Exceptions/Handler.php render method
+```
+    if ($exception instanceof ValidationException)
+    {
+        $response['errors']['validations'] = $exception->errors();
+        return response(['data'=>$response])->header('Content-Type', 'application/json');
+    }
+```
+
+***Madusanka***
+
